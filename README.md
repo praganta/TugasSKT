@@ -1,6 +1,6 @@
-# Rust Project (Implementation of Distributes Control System (DCS) for Temperature and Humidity on Smartcontrol Clothesline )
+# Rust Project (Implementation of Distributes Control System (DCS) for Temperature and Humidity Control on Smartplan Mushroom Cultivation)
 
-## 📦 Smart Clothesline Control
+## System
 edge-gateway2/     → Program utama di ESP32-S3 (kontrol fan & servo)
 cloud_mqtt/        → Program di PC/Server (MQTT + InfluxDB + ThingsBoard)
 
