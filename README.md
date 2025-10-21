@@ -1,8 +1,8 @@
 # Rust Project (Implementation of Distributes Control System (DCS) for Temperature and Humidity on Smartcontrol Clothesline )
 
 ## 📦 Smart Clothesline Control
-├── edge-gateway2/     → Program utama di ESP32-S3 (kontrol fan & servo)
-└── cloud_mqtt/        → Program di PC/Server (MQTT + InfluxDB + ThingsBoard)
+edge-gateway2/     → Program utama di ESP32-S3 (kontrol fan & servo)
+cloud_mqtt/        → Program di PC/Server (MQTT + InfluxDB + ThingsBoard)
 
 
 ## 📘 Deskripsi Proyek  
@@ -87,11 +87,4 @@ sebelum itu nyalakan influxdb di terminal dengan command "influxd"
 cd edge-gateway2
 cargo build --release
 cargo espflash flash --port /dev/ttyACM0 --release --monitor
-
-
-
-  
-
-
-1. 
 
