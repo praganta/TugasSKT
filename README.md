@@ -6,11 +6,17 @@ cloud_mqtt/        → Program di PC/Server (MQTT + InfluxDB + ThingsBoard)
 
 
 ## 📘 Deskripsi Proyek  
-Proyek ini merupakan implementasi **Distributed Control System (DCS)** berbasis **IoT** menggunakan **Rust**, **ESP32-S3**, dan **SHT20**.  
-Tujuannya adalah mengontrol **kelembapan dan suhu** pada sistem **jemuran pintar (smart clothesline)** secara otomatis menggunakan kombinasi sensor, aktuator, dan komunikasi MQTT menuju cloud untuk monitoring.
+Proyek ini merupakan implementasi Distributed Control System (DCS) berbasis IoT menggunakan Rust, ESP32-S3, dan sensor SHT20 untuk sistem budidaya jamur otomatis (Smartplan Mushroom Cultivation).
 
-Ketika kelembapan menurun, atap jemuran otomatis **terbuka** untuk mempercepat pengeringan pakaian.  
-Sebaliknya, jika kelembapan tinggi atau suhu terlalu panas, sistem akan **menutup atap** dan **menyalakan kipas** untuk menjaga efisiensi proses penjemuran.  
+Tujuan utama sistem ini adalah untuk mengontrol suhu dan kelembapan ruang tanam jamur secara otomatis menggunakan kombinasi sensor, aktuator, dan komunikasi MQTT menuju cloud untuk monitoring dan analisis data.
+
+Sistem bekerja secara terdistribusi antara perangkat Edge (ESP32-S3) dan Cloud (Server):
+
+Jika kelembapan udara menurun, sistem akan mengaktifkan humidifier atau menyemprot air untuk menjaga kelembapan optimal bagi pertumbuhan jamur.
+
+Jika suhu terlalu tinggi, maka kipas dinyalakan untuk menurunkan suhu ruangan.
+
+Semua data sensor dikirim ke ThingsBoard untuk monitoring dan disimpan di InfluxDB untuk keperluan analisis historis.
 
 Arsitektur sistem dibagi menjadi dua bagian utama:  
 
